@@ -8,7 +8,8 @@
             {{/if}}
 
             {{#if user}}
-                <li id="account-list-item" class="right"><a class="navigation-button" href="users/{{user.username}}">{{user.username}}</a>
+                <li id="account-list-item" class="right"><a class="navigation-button" href="users/{{user.username}}">
+                    <i class="material-icons">account_circle</i> {{user.username}}</a>
                     <ul>
                         <li><a href="/users/profile">{{translate lang 'account_overview'}}</a></li>
                         <li><a href="/users/profile/edit">{{translate lang 'edit_account'}}</a></li>

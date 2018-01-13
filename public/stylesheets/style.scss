@@ -1,12 +1,16 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+@import "grid";
+
 //@import 'style-tablet';
 //@import 'style-mobile';
 
 $theme-color: #ffa600;
 $theme-color-light: #004f9e;
-$nav-height: 45px;
+$nav-height: 64px;
 $nav-background: rgba(0, 0, 0, 0.75);
-$card-background: #fafafa;
+$page-background: #282828;
+$text-color: #fafafa;
+$card-background: #383838;
 
 body,
 html {
@@ -14,7 +18,8 @@ html {
 	margin: 0;
 	padding: 0;
 	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-	color: #555;
+	color: $text-color;
+	background-color: $page-background;
 	font-size: 16px;
 }
 
@@ -23,6 +28,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow-y: scroll;
+	
 }
 
 main {
@@ -31,12 +37,14 @@ main {
 
 footer {
 	margin-top: 1rem;
-	border-top: 1px solid #ccc;
+	z-index: 10;
+	background-color: $page-background;
 }
 
 // NAVIGATION
 header {
 	height: $nav-height;
+	z-index: 1000;
 }
 
 nav {
@@ -68,6 +76,11 @@ nav {
 
 	text-decoration: none;
 	color: #fff;
+	
+	& > i {
+		line-height: $nav-height;
+		vertical-align: bottom;
+	}
 }
 
 .navigation-button::before {
@@ -126,9 +139,11 @@ nav {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 	padding: 1rem;
 	background-color: $card-background;
+	z-index: 10;
 
 	&.section {
 		margin: 1rem;
+		transform: scale(1);
 	}
 }
 
@@ -138,16 +153,36 @@ nav {
 }
 
 .event-card {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	position: relative;
+	height: 250px;
+	background-color: $card-background;
+	
+	& > .top {
+		position: absolute;
+		padding: 1rem;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	
+	& > .bottom {
+		position: absolute;
+		padding: 1rem;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
 }
 
 // INDEX PAGE
 .img-wrapper {
-	position: absolute;
+	position: fixed;
 	width: 100%;
-	height: 400px;
+	height: 100vh;
 	overflow: hidden;
-	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 
 #header-image {

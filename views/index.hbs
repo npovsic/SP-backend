@@ -11,18 +11,26 @@
         <div class="card section">
             <section class="events-container">
                 <h4>{{translate lang "upcomingEvents"}}</h4>
-                {{#each upcomingEvents}}
-                    {{> eventCard event=this}}
-                {{else}}
-                    <p>{{translate lang "noEventsAvailable"}}</p>
-                {{/each}}
+                <div class="row">
+                    {{#each upcomingEvents}}
+                        <div class="col-lg-2">
+                            {{> eventCard event=this}}
+                        </div>
+                    {{else}}
+                        <p>{{translate lang "noEventsAvailable"}}</p>
+                    {{/each}}
+                </div>
                 
                 <h4>{{translate lang "eventsCreatedByUser"}}</h4>
-                {{#each eventsByUser}}
-                    {{> eventCard event=this}}
-                {{else}}
-                    <p>{{translate lang "noEventsCreatedByUser"}}</p>
-                {{/each}}
+                <div class="row">
+                    {{#each eventsByUser}}
+                        <div class="col-lg-2">
+                            {{> eventCard event=this}}
+                        </div>
+                    {{else}}
+                        <p>{{translate lang "noEventsCreatedByUser"}}</p>
+                    {{/each}}
+                </div>
             </section>
         </div>
     </main>
