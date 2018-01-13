@@ -1,0 +1,53 @@
+
+router.get('/', function(req, res, next) {
+
+});
+
+router.get('/all_events', function(req, res, next) {
+
+});
+
+router.get('/all_events_map', function(req, res, next) {
+
+});
+
+router.get('/event_details/:id', function(req, res, next) {
+
+});
+
+router.post('/event_details/:id', function(req, res, next) {
+
+});
+
+router.get('/add_event', function(req, res, next) {
+
+});
+
+router.post('/add_event', function(req, res, next) {
+
+});
+
+
+router.get('/search', function(req, res, next) {
+
+});
+
+router.get('/register', function(req, res, next) {
+
+});
+
+router.post('/register', function(req, res, next) {
+
+});
+
+router.get('/login', function(req, res, next) {
+    
+});
+
+router.post('/login', function(req, res, next) {
+
+});
+
+router.get('/logout', function(req, res, next) {
+
+});

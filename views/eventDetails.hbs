@@ -1,0 +1,28 @@
+<body>
+    <main>
+        <div id="info_wrapper">
+            <div class="img_responsive_wrapper">
+                <img src="/images/img-showcase.jpg" alt="Event photo"/>
+            </div>
+            <div class="event_details_wrapper">
+                <h1>{{event.title}}</h1>
+                <h3>{{event.date}}</h3>
+                <h3>{{event.location}}</h3>
+                <h3>{{event.host.first_name}} {{event.host.last_name}}</h3>
+            </div>
+            <div class="event_description_wrapper">
+                {{{event.description}}}
+            </div>
+            {{#if user}}
+                <form id="event_details_buttons_wrapper">
+                    {{#unless going}}
+                        <input type="submit" class="button form_button" value="I'M GOING" name="going" formmethod="post"/>
+                    {{else}}
+                        <input type="submit" class="button form_button" value="I'M NOT GOING" name="not_going" formmethod="post"/>
+                    {{/unless}}
+                </form>
+            {{/if}}
+
+        </div>
+    </main>
+</body>

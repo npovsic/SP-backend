@@ -1,0 +1,27 @@
+{
+  "name": "sp-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "db": "mongod --dbpath data"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "client-sessions": "^0.7.0",
+    "cookie-parser": "~1.4.3",
+    "csurf": "^1.9.0",
+    "debug": "~2.2.0",
+    "ejs": "^2.5.5",
+    "express": "~4.14.0",
+    "file-stream-rotator": "0.0.7",
+    "hbs": "~4.0.1",
+    "moment": "^2.17.1",
+    "mongodb": "^2.2.16",
+    "mongoose": "^4.7.6",
+    "mongoose-deep-populate": "^3.0.0",
+    "morgan": "^1.7.0",
+    "password-hash-and-salt": "^0.1.4",
+    "serve-favicon": "~2.3.0"
+  }
+}

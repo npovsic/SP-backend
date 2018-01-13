@@ -1,0 +1,40 @@
+<body>
+    <main>
+        <ul id="all_events_wrapper">
+            <li>
+                <div id="event_types">
+                    <h1 style="color: white; margin-left: 20px">Potrjeni</h1>
+                </div>
+            </li>
+            {{#each going}}
+                <li class="all_events_list_item">
+                    <img src="/images/img-showcase.jpg" alt="Event photo"/>
+                    <div class="event_info">
+                        <h3>{{this.title}}</h3>
+                        <p>{{this.date}}</p>
+                        <p>{{this.location}}</p>
+                        <p>Host: {{this.host.first_name}} {{this.host.last_name}}</p>
+                        <a class="button event_button" href="/event_details/{{this._id}}">Details</a>
+                    </div>
+                </li>
+            {{/each}}
+            <li>
+                <div id="event_types">
+                    <h1 style="color: white; margin-left: 20px">Ustvarjeni dogodki</h1>
+                </div>
+            </li>
+            {{#each created}}
+                <li class="all_events_list_item">
+                    <img src="/images/img-showcase.jpg" alt="Event photo"/>
+                    <div class="event_info">
+                        <h3>{{this.title}}</h3>
+                        <p>{{this.date}}</p>
+                        <p>{{this.location}}</p>
+                        <p>Host: {{this.host.first_name}} {{this.host.last_name}}</p>
+                        <a class="button event_button" href="/event_details/{{this._id}}">Details</a>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </main>
+</body>

@@ -1,0 +1,11 @@
+<body> 
+    <main>
+        <div class="container">
+            {{#if events}}
+                {{#each events}}
+                    {{> eventCard event=this}}
+                {{/each}}
+            {{/if}}
+        </div>
+    </main>
+</body>

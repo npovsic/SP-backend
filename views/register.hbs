@@ -1,0 +1,27 @@
+<body> 
+    <main>
+        <p>LOGIN</p>
+        
+        {{#if error}}
+            <p>Error logging in</p>
+        {{/if}}
+
+        <form method="post" id="register">
+            <h3>Profile picture</h3>
+            <input type="file" name="pic" accept="image/*">
+            <h3>First name</h3>
+            <input id="firstName" class="input_class" type="text" name="firstName">
+            <h3>Last name</h3>
+            <input id="lastName" class="input_class" type="text" name="lastName">
+            <h3>E-mail</h3>
+            <input id="email" class="input_class" type="email" name="email">
+            <h3>Username</h3>
+            <input id="username" class="input_class" type="text" name="username">
+            <h3>Password</h3>
+            <input id="password" class="input_class" type="password" name="password">
+            <h3>City</h3>
+            <input id="city" class="input_class" type="text" name="city">
+            <input type="submit" value="REGISTER" class="button form_button">
+        </form>
+    </main>
+</body>

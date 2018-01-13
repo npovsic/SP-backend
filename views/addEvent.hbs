@@ -1,0 +1,23 @@
+<body> 
+    <main>
+        {{#if failed}}
+            {{failed}}
+        {{/if}}
+        
+        <form method="post" id="add_event">
+            <h3>Event picture</h3>
+            <input type="file" name="pic" accept="image/*">
+            <h3>Name</h3>
+            <input id="name" class="input_class" type="text" name="name" placeholder="Enter the event name">
+            <h3>Date</h3>
+            <input id="date" class="input_class" type="text" name="date" placeholder="Enter the event date">
+            <h3>Time</h3>
+            <input id="time" class="input_class" type="text" name="time" placeholder="Enter the event date">
+            <h3>Location</h3>
+            <input id="location" class="input_class" type="text" name="location" placeholder="Tell us where it's happening">
+            <h3>Description</h3>
+            <textarea id="description" name="description" placeholder="Write a short description about the event."></textarea>
+            <input type="submit" value="CREATE" class="button form_button">
+        </form>
+    </main>
+</body>

@@ -1,0 +1,120 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500";
+body,
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: #555;
+  font-size: 16px; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll; }
+
+main {
+  flex: 1 0 auto; }
+
+footer {
+  margin-top: 1rem;
+  border-top: 1px solid #ccc; }
+
+header {
+  height: 45px; }
+
+nav {
+  height: 45px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed; }
+
+#navigation-buttons-wrapper {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+#navigation-buttons-wrapper > li {
+  display: inline-block;
+  height: 100%;
+  position: relative; }
+
+.navigation-button {
+  display: block;
+  height: 100%;
+  line-height: 45px;
+  padding: 0 1rem;
+  text-decoration: none;
+  color: #fff; }
+
+.navigation-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffa600;
+  height: 0;
+  transition: height 0.5s ease; }
+
+.navigation-button:hover::before {
+  height: 5px; }
+
+.account_list_item > ul {
+  display: none; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.center {
+  text-align: center; }
+
+.theme-color {
+  background-color: #ffa600; }
+  .theme-color.light {
+    background-color: #004f9e; }
+
+.theme-color-text {
+  color: #ffa600; }
+  .theme-color-text.light {
+    color: #004f9e; }
+
+.card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  background-color: #fafafa; }
+  .card.section {
+    margin: 1rem; }
+
+.container {
+  width: 1000px;
+  margin: 0 auto; }
+
+.event-card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+
+.img-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  z-index: -1; }
+
+#header-image {
+  width: 100%; }
+
+.welcome-section {
+  height: 300px;
+  position: relative; }
+  .welcome-section > .welcome-text {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 4rem;
+    text-shadow: 0 0 2px #000; }
+
+/*# sourceMappingURL=style.css.map */

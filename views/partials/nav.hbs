@@ -1,0 +1,24 @@
+<header>
+    <nav>
+        <ul id="navigation-buttons-wrapper">
+            <li class="left"><a class="navigation-button" href="/">{{translate lang 'home'}}</a></li>
+            <li class="left"><a class="navigation-button" href="/events">{{translate lang 'all_events'}}</a></li>
+            {{#if user}}
+                <li><a class="navigation-button" href="/events/add">{{translate lang 'add_event'}}</a></li>
+            {{/if}}
+
+            {{#if user}}
+                <li id="account-list-item" class="right"><a class="navigation-button" href="users/{{user.username}}">{{user.username}}</a>
+                    <ul>
+                        <li><a href="/users/profile">{{translate lang 'account_overview'}}</a></li>
+                        <li><a href="/users/profile/edit">{{translate lang 'edit_account'}}</a></li>
+                        <li><a href="/users/profile/events">{{translate lang 'user_events'}}</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </li>
+            {{else}}
+                <li id="login" class="right"><a class="navigation-button" href="/login">{{translate lang 'login'}}</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>

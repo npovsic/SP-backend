@@ -1,0 +1,21 @@
+<body>
+    <main>
+        <form id="add_event">
+            <h3>Profile picture</h3>
+            <input type="file" name="pic" accept="image/*">
+            <h3>First name</h3>
+            <input id="first_name" class="input_class" type="text" name="first_name" value="{{user.first_name}}">
+            <h3>Last name</h3>
+            <input id="last_name" class="input_class" type="text" name="last_name" value="{{user.last_name}}">
+            <h3>E-mail</h3>
+            <input id="email" class="input_class" type="text" name="email" title="Enter a valid e-mail address."
+                   value="{{user.email}}">
+            <h3>Password</h3>
+            <input id="password" class="input_class" type="password" name="password" value="{{user.password}}">
+            <h3>City</h3>
+            <input id="register_city" class="input_class" type="text" name="city" value="{{user.city}}">
+            <input type="submit" value="EDIT" class="button form_button" formmethod="post">
+        </form>
+    </main>
+</body>
+

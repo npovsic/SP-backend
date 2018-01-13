@@ -1,0 +1,18 @@
+<body> 
+    <main>
+        <p>LOGIN</p>
+        
+        {{#if error}}
+            <p>Error logging in</p>
+        {{/if}}
+        
+        <form method="post">
+            <input type="text" id="username" name="username">
+            <input type="password" id="password" name="password">
+            
+            <button type="submit">{{translate lang "login"}}</button>
+        </form>
+        
+        <a href="/register">{{translate lang "register"}}</a>
+    </main>
+</body>

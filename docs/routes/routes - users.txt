@@ -1,0 +1,15 @@
+router.get('/:username', function(req, res, next) {
+
+});
+
+router.get('/:username/edit', function(req, res, next) {
+
+});
+
+router.post('/:username/edit', function(req, res, next) {
+
+});
+
+router.get('/:username/events', function(req, res, next) {
+
+});

@@ -1,0 +1,29 @@
+<body onload="init()">
+    <main>
+        <div class="img-wrapper">
+            <img id="header-image" src="/images/background.jpeg"/>
+        </div>
+
+        <section class="welcome-section">
+            <h1 class="center welcome-text theme-color-text">{{translate lang "welcomeText"}}</h1>
+        </section>
+    
+        <div class="card section">
+            <section class="events-container">
+                <h4>{{translate lang "upcomingEvents"}}</h4>
+                {{#each upcomingEvents}}
+                    {{> eventCard event=this}}
+                {{else}}
+                    <p>{{translate lang "noEventsAvailable"}}</p>
+                {{/each}}
+                
+                <h4>{{translate lang "eventsCreatedByUser"}}</h4>
+                {{#each eventsByUser}}
+                    {{> eventCard event=this}}
+                {{else}}
+                    <p>{{translate lang "noEventsCreatedByUser"}}</p>
+                {{/each}}
+            </section>
+        </div>
+    </main>
+</body>

@@ -1,0 +1,56 @@
+{
+  "en": {
+    "home": "Home",
+    "all_events": "All events",
+    "add_event": "Add event",
+    "search": "Search",
+    "login": "Login",
+    "maps": "Maps",
+
+    "account_overview": "Account overview",
+    "edit_account": "Edit account",
+    "user_events": "My events",
+
+    "details": "Details",
+
+    "welcome": "Welcome to ",
+    "welcome_subtitle": "Browse events, search for specific events, or add them.",
+    "featured_events": "Featured events",
+
+    "info_title": "Choose which event you wish to see.",
+    "info_subtitle": "Save them for later and get reminders when they are coming up!",
+
+    "video_text": "Connect with your friends and see where they are going.",
+
+    "footer_author": "Made by: Nejc Povšič",
+    "footer_info": "Course project",
+    "year": "2017"
+  },
+  "sl": {
+    "home": "Domov",
+    "all_events": "Dogodki",
+    "add_event": "Dodaj",
+    "search": "Iskanje",
+    "login": "Prijava",
+    "maps": "Zemljevid",
+
+    "account_overview": "Moji podatki",
+    "edit_account": "Uredi podatke",
+    "user_events": "Moji dogodki",
+
+    "details": "Podrobnosti",
+
+    "welcome": "Dobrodošli na strani ",
+    "welcome_subtitle": "Preglej dogodke, išči ali dodaj dogodke.",
+    "featured_events": "Izbrani dogodki",
+
+    "info_title": "Izberi dogodek, ki te zanima.",
+    "info_subtitle": "Dodaj dogodke med priljubljene.",
+
+    "video_text": "Poveži se s prijatelji in preglej kam gredo.",
+
+    "footer_author": "Ustvaril: Nejc Povšič",
+    "footer_info": "Projekt za predmet Spletno programiranje",
+    "year": "2017"
+  }
+}
