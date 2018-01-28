@@ -10,7 +10,8 @@ $nav-height: 64px;
 $nav-background: rgba(0, 0, 0, 0.75);
 $page-background: #282828;
 $text-color: #fafafa;
-$card-background: #383838;
+$card-background: #333333;
+$tile-background: #4d4d4d;
 
 body,
 html {
@@ -29,6 +30,14 @@ body {
 	flex-direction: column;
 	overflow-y: scroll;
 	
+}
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
 }
 
 main {
@@ -99,9 +108,31 @@ nav {
 }
 
 // account dropdown
-.account_list_item {
-	& > ul {
+li#account-list-item {
+	position: relative;
+	
+	ul {
 		display: none;
+	}
+	
+	&:hover {
+		ul {
+			display: block;
+			position: absolute;
+			width: 200px;
+			background: $nav-background;
+			list-style: none;
+			padding: 0;
+			right: 0;
+			
+			li {
+				a {
+					padding: 0.5rem;
+					display: block;
+					color: $theme-color;
+				}
+			}
+		}
 	}
 }
 
@@ -152,12 +183,21 @@ nav {
 	margin: 0 auto;
 }
 
-.event-card {
+.tile {
 	position: relative;
 	height: 250px;
-	background-color: $card-background;
+	background-color: $tile-background;
+}
+
+.event-tile {
+	img {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
 	
-	& > .top {
+	.top {
 		position: absolute;
 		padding: 1rem;
 		top: 0;
@@ -165,13 +205,45 @@ nav {
 		width: 100%;
 	}
 	
-	& > .bottom {
+	.bottom {
 		position: absolute;
 		padding: 1rem;
 		bottom: 0;
 		left: 0;
 		width: 100%;
 	}
+	
+	.title {
+		margin-top: 0;
+		font-size: 2rem;
+	}
+}
+
+.button {
+	background-color: $theme-color;
+	color: $text-color;
+	text-decoration: none;
+	padding: 12px;
+	text-transform: uppercase;
+	
+	&.flat {
+		background-color: transparent;
+		color: $theme-color;
+		
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.2);
+		}
+	}
+	
+	&:hover {
+		background-color: $theme-color-light;
+	}
+}
+
+.truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 // INDEX PAGE

@@ -9,7 +9,7 @@
 
             <li class="search"><a class="navigation_button" href="search">Search</a></li>
             {{#if user}}
-            <li class="account_list_item"><a class="navigation_button" href="users/{{user.username}}">{{user.username}}</a>
+            <li class="account-list-item"><a class="navigation_button" href="users/{{user.username}}">{{user.username}}</a>
                 <ul>
                     <li><a href="/users/{{user.username}}">Account overview</a></li>
                     <li><a href="/users/{{user.username}}/edit">Edit account</a></li>
@@ -17,7 +17,7 @@
                     <li><a href="/logout">Logout</a></li>
                 </ul>
             {{else}}
-            <li class="account_list_item"><a class="navigation_button" href="#login_form">Login</a>
+            <li class="account-list-item"><a class="navigation_button" href="#login_form">Login</a>
             {{/if}}
         </li>
         </ul>

@@ -2,26 +2,26 @@
  * Created by Nejc on 22. 10. 2016.
  */
 
-let nav;
-let navTopDistance;
+let heroImage;
 
 function init() {
     console.log("It's not safe here, go back!");
 
-    nav = document.getElementsByTagName('header');
+    heroImage = document.getElementById('header-image');
 
-    navTopDistance = nav[0].offsetTop;
-    
-    let login = document.getElementById('login');
-    
-    login.addEventListener('click', function(event) {
-        console.log('Login button clicked   ');
-    });
+    window.addEventListener('scroll', animateHeroImage);
 }
 
 function getStyle(id, name) {
     let element = document.getElementById(id);
     return element.currentStyle ? element.currentStyle[name] : window.getComputedStyle ? window.getComputedStyle(element, null).getPropertyValue(name) : null;
+}
+
+function animateHeroImage(event) {
+    console.log(event.pageY);
+    
+    heroImage.style.opacity = (200 - event.pageY) / 200;
+    heroImage.style.boxShadow = `0 0 ${event.pageY}px rgba(0,0,0,0.9) inset`;
 }
 
 function changeLanguage(language) {

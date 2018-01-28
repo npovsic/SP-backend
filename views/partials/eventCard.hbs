@@ -1,11 +1,13 @@
-<div class="event-card">
+<div class="tile event-tile">
     <img class="responsive-img" src="" alt=""/>
     
     <div class="top">
         <p class="title">{{event.title}}</p>
-        <p>{{event.date}}</p>
-        <p>{{event.time}}</p>
+        <p>{{event.date}}, {{event.time}}</p>
         <p>{{event.location}}</p>
-        <a href="/events/{{event._id}}">{{translate lang "details"}}</a>
+    </div>
+    
+    <div class="bottom">
+        <a href="/events/{{event._id}}" class="button flat right">{{translate lang "details"}}</a>
     </div>
 </div>
